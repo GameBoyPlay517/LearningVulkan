@@ -15,7 +15,9 @@ add_executable(LearningVulkan main.cpp
         lve_window.h
         lve_window.cpp
         first_app.cpp
-        first_app.h)
+        first_app.h
+        lve_pipeline.cpp
+        lve_pipeline.h)
 
 # Link against Vulkan
 target_link_libraries(LearningVulkan ${Vulkan_LIBRARIES})
