@@ -8,6 +8,7 @@
 
 #include "lve_window.h"
 #include "lve_pipeline.h"
+#include "lve_device.h"
 
 namespace lve {
     class FirstApp
@@ -20,7 +21,8 @@ namespace lve {
         void run();
     private:
         LveWindow lveWindow{WIDTH, HEIGHT, "Hello Vulkan!"};
-        LvePipeline lvePipeline{"D:/Users/grabb/CLionProjects/LearningVulkan/shaders/simple_shader.vert.spv", "D:/Users/grabb/CLionProjects/LearningVulkan/shaders/simple_shader.vert.spv"};
+        LveDevice lveDevice {lveWindow};
+        LvePipeline lvePipeline{lveDevice,"D:/Users/grabb/CLionProjects/LearningVulkan/shaders/simple_shader.vert.spv", "D:/Users/grabb/CLionProjects/LearningVulkan/shaders/simple_shader.vert.spv", LvePipeline::defaultPipelineConfigInfo(WIDTH, HEIGHT)};
 
 
     };
